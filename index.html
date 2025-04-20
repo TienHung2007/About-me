@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/me-8.png" type="image/x-icon">
+</head>
+<body>
+    <header class="hero">
+        <div class="bubble-container"></div>
+        <div class="hero-content">
+            <h1>Xin chào, mình là <span class="highlight">Đặng Tiến Hưng</span></h1>
+            <p>Mình là <span id="typed-text"></span></p>
+            <a href="#about" class="cta-button">Khám phá thêm</a>
+        </div>
+    </header>
+    <nav>
+        <a href="#about">Giới thiệu</a>
+        <a href="#skills">Kỹ năng</a>
+        <a href="#education">Học vấn</a>
+        <a href="#hobbies">Sở thích</a>
+        <a href="#portfolio">Dự án</a>
+        <a href="#contact">Liên hệ</a>
+        <button id="theme-toggle" class="theme-toggle">
+            <span class="sun-icon">☀️</span>
+            <span class="moon-icon">🌙</span>
+        </button>
+    </nav>
+    <div class="container">
+        <div class="section" id="about" data-aos="fade-up">
+            <h2>Giới thiệu</h2>
+            <img src="img/208289183.jpg" alt="Profile Picture" class="profile-img">
+            <p>Xin chào! Mình là Đặng Tiến Hưng hoặc biệt danh là Haru, một lập trình viên full-stack, nhà thiết kế UI/UX. Mình đam mê sáng tạo những trang web độc đáo và mới lạ, luôn tìm cách đưa ý tưởng sáng tạo vào từng dự án. Dưới đây là thông tin của mình!</p>
+        </div>
+        <div class="section" id="skills" data-aos="fade-up" data-aos-delay="100">
+            <h2>Thành thạo</h2>
+            <ul class="skills-grid">
+                <li>HTML</li>
+                <li>Css</li>
+                <li>JavaScript</li>
+                <li>Php</li>
+            </ul>
+        </div>
+        <div class="section" id="education" data-aos="fade-up" data-aos-delay="150">
+            <h2>Học vấn</h2>
+            <div class="education-list">
+                <div class="education-item">
+                    <h3>Tốt nghiệp ngành công nghệ thông tin</h3>
+                    <p><strong>Trường cao đẳng Lý Tự Trọng</strong></p>
+                    <p><strong>Thời gian:</strong> 2022 - 2025</p>
+                    <p>Bắt đầu học về code, học về các ngôn ngữ lập trình</p>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="hobbies" data-aos="fade-up" data-aos-delay="200">
+            <h2>Sở thích</h2>
+            <ul class="hobbies-list">
+                <li>Khám phá các công nghệ lập trình mới</li>
+                <li>Thiết kế giao diện sáng tạo</li>
+                <li>Chơi thể thao</li>
+                <li>Đọc sách về công nghệ và đổi mới</li>
+            </ul>
+        </div>
+        <div class="section" id="portfolio" data-aos="fade-up" data-aos-delay="250">
+            <h2>Dự án</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-aos="zoom-in">
+                    <img src="img/project-1.png" alt="Project 1">
+                    <h3>Website bán hàng</h3>
+                    <p>sử dụng html, css, js, php</p>
+                    <a href="https://github.com/TienHung2007/sales-website" target="_blank" class="source-link">Source Code</a>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="contact" data-aos="fade-up" data-aos-delay="300">
+            <h2>Liên hệ</h2>
+            <div class="contact-info">
+                <p><strong>Số điện thoại:</strong> 0379163407</p>
+                <p><strong>Gmail:</strong> <a href="mailto:dangtienhungcode@gmail.com">dangtienhungcode@gmail.com</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/TienHung2007" target="_blank">github.com/TienHung2007</a></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 [Tên của bạn]. All rights reserved.</p>
+        <a href="#" class="scroll-top">↑</a>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        // Bubble effect
+        const bubbleContainer = document.querySelector('.bubble-container');
+        function createBubble() {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            const size = Math.random() * 40 + 20;
+            bubble.style.width = `${size}px`;
+            bubble.style.height = `${size}px`;
+            bubble.style.left = `${Math.random() * 100}vw`;
+            bubble.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            bubbleContainer.appendChild(bubble);
+            setTimeout(() => bubble.remove(), 10000);
+        }
+        setInterval(createBubble, 500);
+
+        // Typed.js initialization
+        new Typed('#typed-text', {
+            strings: ['Lập trình viên', 'Người yêu âm nhạc', 'Người sáng tạo', 'Người thích Manga, Anime'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            loop: true
+        });
+
+        // AOS initialization
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Smooth scroll for navigation
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Scroll-to-top button
+        document.querySelector('.scroll-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Theme toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            }
+        });
+
+        // Load saved theme from localStorage
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+    </script>
+</body>
+</html>
