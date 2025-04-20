@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About me</title>
+    <title>Hồ sơ cá nhân</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/me-8.png" type="image/x-icon">
 </head>
 <body>
     <header class="hero">
@@ -18,74 +17,89 @@
         </div>
     </header>
     <nav>
-        <a href="#about">Giới thiệu</a>
-        <a href="#skills">Kỹ năng</a>
-        <a href="#education">Học vấn</a>
-        <a href="#hobbies">Sở thích</a>
-        <a href="#portfolio">Dự án</a>
-        <a href="#contact">Liên hệ</a>
-        <button id="theme-toggle" class="theme-toggle">
-            <span class="sun-icon">☀️</span>
-            <span class="moon-icon">🌙</span>
-        </button>
+        <div class="nav-toggle">☰</div>
+        <div class="nav-menu">
+            <a href="#about">Giới thiệu</a>
+            <a href="#skills">Kỹ năng</a>
+            <a href="#education">Học vấn</a>
+            <a href="#hobbies">Sở thích</a>
+            <a href="#portfolio">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="sun-icon">☀️</span>
+                <span class="moon-icon">🌙</span>
+            </button>
+        </div>
     </nav>
     <div class="container">
         <div class="section" id="about" data-aos="fade-up">
-            <h2>Giới thiệu</h2>
-            <img src="img/208289183.jpg" alt="Profile Picture" class="profile-img">
-            <p>Xin chào! Mình là Đặng Tiến Hưng hoặc biệt danh là Haru, một lập trình viên full-stack, nhà thiết kế UI/UX. Mình đam mê sáng tạo những trang web độc đáo và mới lạ, luôn tìm cách đưa ý tưởng sáng tạo vào từng dự án. Dưới đây là thông tin của mình!</p>
+            <div class="section-content">
+                <h2>Giới thiệu</h2>
+                <img src="img/208289183.jpg" alt="Profile Picture" class="profile-img">
+                <p>Xin chào! Mình là Đặng Tiến Hưng hoặc biệt danh là Haru, một lập trình viên full-stack, nhà thiết kế UI/UX. Mình đam mê sáng tạo những trang web độc đáo và mới lạ, luôn tìm cách đưa ý tưởng sáng tạo vào từng dự án. Dưới đây là thông tin của mình!</p>
+            </div>
         </div>
         <div class="section" id="skills" data-aos="fade-up" data-aos-delay="100">
-            <h2>Thành thạo</h2>
-            <ul class="skills-grid">
-                <li>HTML</li>
-                <li>Css</li>
-                <li>JavaScript</li>
-                <li>Php</li>
-            </ul>
+            <div class="section-content">
+                <h2>Thành thạo</h2>
+                <ul class="skills-grid">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
         </div>
         <div class="section" id="education" data-aos="fade-up" data-aos-delay="150">
-            <h2>Học vấn</h2>
-            <div class="education-list">
-                <div class="education-item">
-                    <h3>Tốt nghiệp ngành công nghệ thông tin</h3>
-                    <p><strong>Trường cao đẳng Lý Tự Trọng</strong></p>
-                    <p><strong>Thời gian:</strong> 2022 - 2025</p>
-                    <p>Bắt đầu học về code, học về các ngôn ngữ lập trình</p>
+            <div class="section-content">
+                <h2>Học vấn</h2>
+                <div class="education-list">
+                    <div class="education-item">
+                        <h3>Tốt nghiệp ngành Công nghệ Thông tin</h3>
+                        <p><strong>Trường Cao đẳng Lý Tự Trọng</strong></p>
+                        <p><strong>Thời gian:</strong> 2022 - 2025</p>
+                        <p>Bắt đầu học về code, học về các ngôn ngữ lập trình</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section" id="hobbies" data-aos="fade-up" data-aos-delay="200">
-            <h2>Sở thích</h2>
-            <ul class="hobbies-list">
-                <li>Khám phá các công nghệ lập trình mới</li>
-                <li>Thiết kế giao diện sáng tạo</li>
-                <li>Chơi thể thao</li>
-                <li>Đọc sách về công nghệ và đổi mới</li>
-            </ul>
+            <div class="section-content">
+                <h2>Sở thích</h2>
+                <ul class="hobbies-list">
+                    <li>Khám phá các công nghệ lập trình mới</li>
+                    <li>Thiết kế giao diện sáng tạo</li>
+                    <li>Chơi thể thao</li>
+                    <li>Đọc sách về công nghệ và đổi mới</li>
+                </ul>
+            </div>
         </div>
         <div class="section" id="portfolio" data-aos="fade-up" data-aos-delay="250">
-            <h2>Dự án</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-card" data-aos="zoom-in">
-                    <img src="img/project-1.png" alt="Project 1">
-                    <h3>Website bán hàng</h3>
-                    <p>sử dụng html, css, js, php</p>
-                    <a href="https://github.com/TienHung2007/sales-website" target="_blank" class="source-link">Source Code</a>
+            <div class="section-content">
+                <h2>Dự án</h2>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card" data-aos="zoom-in">
+                        <img src="img/project-1.png" alt="Project 1">
+                        <h3>Website bán hàng</h3>
+                        <p>Sử dụng HTML, CSS, JS, PHP</p>
+                        <a href="https://github.com/TienHung2007/sales-website" target="_blank" class="source-link">Source Code</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="section" id="contact" data-aos="fade-up" data-aos-delay="300">
-            <h2>Liên hệ</h2>
-            <div class="contact-info">
-                <p><strong>Số điện thoại:</strong> 0379163407</p>
-                <p><strong>Gmail:</strong> <a href="mailto:dangtienhungcode@gmail.com">dangtienhungcode@gmail.com</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/TienHung2007" target="_blank">github.com/TienHung2007</a></p>
+            <div class="section-content">
+                <h2>Liên hệ</h2>
+                <div class="contact-info">
+                    <p><strong>Số điện thoại:</strong> 0379163407</p>
+                    <p><strong>Gmail:</strong> <a href="mailto:dangtienhungcode@gmail.com">dangtienhungcode@gmail.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/TienHung2007" target="_blank">github.com/TienHung2007</a></p>
+                </div>
             </div>
         </div>
     </div>
     <footer>
-        <p>© 2025 [Tên của bạn]. All rights reserved.</p>
+        <p>© 2025 Đặng Tiến Hưng. All rights reserved.</p>
         <a href="#" class="scroll-top">↑</a>
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -120,11 +134,24 @@
             once: true
         });
 
-        // Smooth scroll for navigation
+        // Slide-down navigation effect
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                const sectionContent = targetElement.querySelector('.section-content');
+                if (sectionContent) {
+                    sectionContent.classList.remove('slide-down');
+                    sectionContent.style.opacity = '0';
+                    sectionContent.style.transform = 'translateY(-50px)';
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    setTimeout(() => {
+                        sectionContent.classList.add('slide-down');
+                        sectionContent.style.opacity = '1';
+                        sectionContent.style.transform = 'translateY(0)';
+                    }, 100);
+                }
             });
         });
 
@@ -151,6 +178,13 @@
         if (savedTheme) {
             document.documentElement.setAttribute('data-theme', savedTheme);
         }
+
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
