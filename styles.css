@@ -123,6 +123,10 @@ nav {
     color: var(--text-color);
 }
 
+.nav-toggle:focus, .theme-toggle:focus, a:focus {
+    outline: 2px solid var(--highlight);
+    outline-offset: 2px;
+}
 .nav-menu {
     display: flex;
     justify-content: center;
@@ -242,7 +246,7 @@ nav {
 
 .education-list {
     display: flex;
-    flex-direction: container;
+    flex-direction: column;
     gap: 1em;
 }
 
@@ -289,11 +293,12 @@ nav {
 }
 
 .portfolio-card img {
-    width: 300px;
-    height: 400px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border-radius: 8px;
     margin-bottom: 0.8em;
-    border: 1px solid #74c0fc;
+    border: 1px solid var(--highlight);
 }
 
 .portfolio-card h3 {
@@ -376,6 +381,17 @@ footer {
     font-size: 1.8rem;
     text-decoration: none;
     transition: color 0.3s ease;
+}
+
+.section::before {
+    content: '';
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--highlight), transparent);
+    margin-bottom: 1.5em;
+}
+.section:first-child::before {
+    display: none;
 }
 
 .scroll-top:hover {
