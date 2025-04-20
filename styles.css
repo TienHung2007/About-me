@@ -118,15 +118,60 @@ nav {
 
 .nav-toggle {
     display: none;
-    font-size: 1.8rem;
+    background: none;
+    border: none;
     cursor: pointer;
-    color: var(--text-color);
+    padding: 0.5em;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 18px;
+    position: relative;
+}
+
+.bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: var(--text-color);
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+
+.bar:nth-child(1) {
+    top: 0;
+}
+
+.bar:nth-child(2) {
+    top: 7.5px;
+}
+
+.bar:nth-child(3) {
+    top: 15px;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+    transform: rotate(45deg);
+    top: 7.5px;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 7.5px;
 }
 
 .nav-toggle:focus, .theme-toggle:focus, a:focus {
     outline: 2px solid var(--highlight);
     outline-offset: 2px;
 }
+
 .nav-menu {
     display: flex;
     justify-content: center;

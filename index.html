@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hồ sơ cá nhân</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=1">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="img/me-8.png"image/x-icon">
+    <link rel="shortcut icon" href="img/me-8.png" type="image/x-icon">
 </head>
 <body>
     <header class="hero">
@@ -18,7 +18,13 @@
         </div>
     </header>
     <nav>
-        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </span>
+        </button>
         <div class="nav-menu">
             <a href="#about">Giới thiệu</a>
             <a href="#skills">Kỹ năng</a>
@@ -36,7 +42,7 @@
         <div class="section" id="about" data-aos="fade-up">
             <div class="section-content">
                 <h2>Giới thiệu</h2>
-                <img src="img/208289183.jpg" alt="Profile Picture" class="profile-img">
+                <img src="img/208289183.jpg" alt="Profile Picture" class="profile-img" loading="lazy">
                 <p>Xin chào! Mình là Đặng Tiến Hưng hoặc biệt danh là Haru, một lập trình viên full-stack, nhà thiết kế UI/UX. Mình đam mê sáng tạo những trang web độc đáo và mới lạ, luôn tìm cách đưa ý tưởng sáng tạo vào từng dự án. Dưới đây là thông tin của mình!</p>
             </div>
         </div>
@@ -80,11 +86,10 @@
                 <h2>Dự án</h2>
                 <div class="portfolio-grid">
                     <div class="portfolio-card" data-aos="zoom-in">
-                        <img src="img/project-1.png" alt="Project 1">
+                        <img src="img/project-1.png" alt="Website bán hàng" loading="lazy">
                         <h3>Website bán hàng</h3>
                         <p>Sử dụng HTML, CSS, JS, PHP</p>
                         <a href="https://github.com/TienHung2007/sales-website" target="_blank" class="source-link">Source Code</a>
-                        <a href="https://tienhung2007.github.io/sales-website" target="_blank" class="source-link">Live Demo</a>
                     </div>
                 </div>
             </div>
@@ -106,6 +111,6 @@
     </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=1"></script>
 </body>
 </html>

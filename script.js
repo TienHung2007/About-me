@@ -35,10 +35,14 @@ document.querySelectorAll('nav a').forEach(anchor => {
         const targetId = this.getAttribute('href');
         const targetElement = document.querySelector(targetId);
         const sectionContent = targetElement.querySelector('.section-content');
+        const navMenu = document.querySelector('.nav-menu');
+        const navToggle = document.querySelector('.nav-toggle');
         if (sectionContent) {
             sectionContent.classList.remove('slide-down');
             sectionContent.style.opacity = '0';
             sectionContent.style.transform = 'translateY(-50px)';
+            navMenu.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
             targetElement.scrollIntoView({ behavior: 'smooth' });
             setTimeout(() => {
                 sectionContent.classList.add('slide-down');
