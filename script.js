@@ -84,3 +84,15 @@ navToggle.addEventListener('click', () => {
     const isExpanded = navMenu.classList.toggle('active');
     navToggle.setAttribute('aria-expanded', isExpanded);
 });
+
+const filterButtons = document.querySelectorAll('.filter-btn');
+const portfolioCards = document.querySelectorAll('.portfolio-card');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        portfolioCards.forEach(card => {
+            card.style.display = filter === 'all' || card.dataset.category.includes(filter) ? 'block' : 'none';
+        });
+    });
+});
